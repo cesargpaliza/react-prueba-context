@@ -1,4 +1,4 @@
-import { createContext, Component, useContext} from 'react'
+import { createContext, Component} from 'react'
 
 const Contexto1 = createContext('1er Contexto')
 const Contexto2 = createContext('2do Contexto')
@@ -31,20 +31,13 @@ class Componente extends Component {
 }
 
 
-const Componente2 = () => {
-    const valor1 = useContext(Contexto1)
-    const valor2 = useContext(Contexto2)
-    return(
-        <div>{`${valor1} - ${valor2}`}</div>
-    )
-}
+
 
 const App = () => {
     return(
         <>  
             <Provider>
                 <Componente/>                
-                <Componente2/>                
             </Provider>                     
         </>
     )
